@@ -40,10 +40,14 @@ export function Contact() {
   }, [])
 
   const handleSubmit = () => {
-    const mailtoLink = `mailto:encomendasle.reux@gmail.com?subject=${encodeURIComponent(formData.subject || 'Contato via Site')}&body=${encodeURIComponent(
+    const subject = encodeURIComponent(formData.subject || 'Contato via Site')
+    const body = encodeURIComponent(
       `Nome: ${formData.name}\nEmail: ${formData.email}\n\nMensagem:\n${formData.message}`
-    )}`
-    window.location.href = mailtoLink
+    )
+    window.open(
+      `https://mail.google.com/mail/?view=cm&to=encomendasle.reux@gmail.com&su=${subject}&body=${body}`,
+      '_blank'
+    )
   }
 
   return (
@@ -76,7 +80,9 @@ export function Contact() {
           {/* Contact Links */}
           <div className="mt-8 flex flex-col gap-4">
             <a 
-              href="mailto:encomendasle.reux@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&to=encomendasle.reux@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 group"
             >
               <div className="w-10 h-10 bg-[#ff3131] flex items-center justify-center">
