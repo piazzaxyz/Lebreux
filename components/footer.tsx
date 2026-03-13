@@ -88,7 +88,7 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-2">
             <span className="text-white/20 text-xs font-mono">Desenvolvido por</span>
-            <a href="https://instagram.com/piazza.dev" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-[#ff3131] text-xs font-mono transition">@piazza.dev</a>
+            <a href="https://instagram.com/piazzadev" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-[#ff3131] text-xs font-mono transition">@piazza.dev</a>
           </div>
         </div>
       </div>
