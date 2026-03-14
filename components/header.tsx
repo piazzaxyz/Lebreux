@@ -39,14 +39,16 @@ export function Header() {
   }, [])
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        isScrolled
+          ? 'bg-[#0a0a0a]/95 border-b-2 border-[#ff3131]'
+          : 'bg-transparent'
+      )}
+    >
       <nav
-        className={cn(
-          'flex items-center justify-between w-full max-w-6xl mx-auto px-6 py-3 transition-all duration-300',
-          isScrolled 
-            ? 'bg-[#0a0a0a]/95 border-b-2 border-[#ff3131]' 
-            : 'bg-transparent'
-        )}
+        className="flex items-center justify-between w-full max-w-6xl mx-auto px-6 py-4"
       >
         {/* Logo */}
         <a 
